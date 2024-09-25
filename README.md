@@ -23,3 +23,7 @@ You can install the required packages with the following command:
 ```bash
 pip install PyQt6 PyQtGraph requests
 ```
+
+## Getting Started
+
+  
