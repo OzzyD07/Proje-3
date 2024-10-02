@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = 'your_alpha_vantage_api_key'
+API_KEY = 'your_api_key'
 
 def get_stock_data(symbol):
 
