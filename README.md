@@ -1,69 +1,202 @@
-# Stock Market Tracker
+<div align="center">
 
-This is a PyQt6-based desktop application that allows users to track stock market data. The application features a login system and real-time stock data visualization.
+# 📈 Stock Market Tracker
 
-## Features
+### A Python desktop application for exploring and visualizing stock market data
 
-- User authentication (login and registration)
-- Real-time stock data retrieval
-- Interactive stock price chart
-- User-friendly GUI
+![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge\&logo=python\&logoColor=white)
+![PyQt6](https://img.shields.io/badge/PyQt6-Desktop_GUI-41CD52?style=for-the-badge\&logo=qt\&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge\&logo=mysql\&logoColor=white)
+![Alpha Vantage](https://img.shields.io/badge/Alpha_Vantage-Stock_API-blue?style=for-the-badge)
 
-## Prerequisites
+</div>
 
-Before you begin, ensure you have met the following requirements:
+---
 
-- Python 3.6+
-- PyQt6
-- pyqtgraph
-- mysql-connector-python
-- requests
+## 📌 About
 
-## Installation
+**Stock Market Tracker** is a desktop application developed with **Python and PyQt6** for retrieving and visualizing stock market data.
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/OzzyD07/PROJE-3.git
+Users can create an account, log into the application, search for a stock using its ticker symbol and visualize historical daily closing prices through an interactive chart.
 
-2. Navigate to the project directory:
-   ```
-   cd PROJE-3
-   ```
+The project demonstrates desktop GUI development, external REST API integration, database-backed authentication and financial data visualization in Python.
 
-3. Install the required packages:
-   ```
-   pip install PyQt6 pyqtgraph mysql-connector-python requests
-   ```
+---
 
-4. Set up the MySQL database:
-   - Create a database named `users`
-   - Create a table named `users` with columns `userName` and `password`
+## ✨ Features
 
-5. Update the database connection details in `services/db.py`
+* 🔐 User registration and login
+* 📊 Stock market data retrieval
+* 🔎 Search stocks using ticker symbols
+* 📈 Interactive stock price visualization
+* 🗄️ MySQL-based user storage
+* 🌐 Alpha Vantage API integration
+* 🖥️ Native desktop interface with PyQt6
 
-6. Get an API key from Alpha Vantage and update it in `services/stock_api.py`
+---
 
-## Usage
+## 🧰 Tech Stack
 
-To run the application:
+| Technology                 | Purpose                   |
+| -------------------------- | ------------------------- |
+| **Python**                 | Application logic         |
+| **PyQt6**                  | Desktop user interface    |
+| **PyQtGraph**              | Interactive stock charts  |
+| **MySQL**                  | User authentication data  |
+| **mysql-connector-python** | Python ↔ MySQL connection |
+| **Requests**               | HTTP API communication    |
+| **Alpha Vantage API**      | Stock market data         |
 
+---
+
+## 🏗️ Project Structure
+
+```text
+python-StockMarket/
+│
+├── login_page.py
+│   └── Login & registration interface
+│
+├── main_page.py
+│   └── Main stock tracking interface
+│
+├── services/
+│   ├── db.py
+│   │   └── MySQL database connection
+│   │
+│   └── stock_api.py
+│       └── Alpha Vantage API integration
+│
+└── README.md
 ```
+
+---
+
+## 🔄 Application Flow
+
+```text
+User
+ │
+ ▼
+Login / Registration
+ │
+ ▼
+MySQL Database
+ │
+ ▼
+Stock Search
+ │
+ ▼
+Alpha Vantage API
+ │
+ ▼
+Daily Market Data
+ │
+ ▼
+Interactive Price Chart
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/OzzyD07/python-StockMarket.git
+cd python-StockMarket
+```
+
+### 2. Install dependencies
+
+```bash
+pip install PyQt6 pyqtgraph mysql-connector-python requests
+```
+
+---
+
+## 🗄️ Database Configuration
+
+Create a MySQL database named:
+
+```sql
+users
+```
+
+Configure the connection inside:
+
+```text
+services/db.py
+```
+
+```python
+mysql.connector.connect(
+    host="your_host_name",
+    user="your_username",
+    password="your_password",
+    database="users"
+)
+```
+
+Create the required user table containing the application's username and password fields.
+
+---
+
+## 📡 Alpha Vantage Configuration
+
+Obtain an API key from **Alpha Vantage** and open:
+
+```text
+services/stock_api.py
+```
+
+Replace:
+
+```python
+API_KEY = "your_api_key"
+```
+
+with your own API key.
+
+> API keys and database credentials should not be committed to a public repository.
+
+---
+
+## ▶️ Run the Application
+
+Start the application with:
+
+```bash
 python login_page.py
 ```
 
-1. Register a new account or log in with existing credentials
-2. Enter a stock symbol (e.g., AAPL for Apple Inc.)
-3. Click "Load Stock Data" to view the stock's price chart
+After launching:
 
-## Project Structure
+1. Create an account or sign in.
+2. Enter a stock ticker such as `AAPL`.
+3. Load the stock data.
+4. Explore its historical daily closing prices through the chart.
 
-- `login_page.py`: Contains the login and registration UI
-- `main_page.py`: Contains the main stock tracking UI
-- `services/db.py`: Handles database connections
-- `services/stock_api.py`: Handles stock data retrieval from Alpha Vantage API
+---
 
-## Acknowledgments
+## 🎯 Project Focus
 
-- [Alpha Vantage](https://www.alphavantage.co/) for providing the stock market data API
-- [PyQt6](https://www.riverbankcomputing.com/software/pyqt/) for the GUI framework
-- [pyqtgraph](http://www.pyqtgraph.org/) for the interactive plotting
+This project was built to practice and demonstrate:
+
+**Python desktop development · GUI design · REST API integration · MySQL database connectivity · authentication flows · financial data processing · interactive data visualization**
+
+---
+
+## 👨‍💻 Author
+
+**Ozancan Değirmenci**
+
+[![GitHub](https://img.shields.io/badge/GitHub-OzzyD07-181717?style=for-the-badge\&logo=github)](https://github.com/OzzyD07)
+
+---
+
+<div align="center">
+
+### Built with Python, PyQt6 & Alpha Vantage 📈
+
+</div>
